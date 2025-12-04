@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请奖励中心 - 邀请好友赚优惠券</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">🎁 邀请奖励中心</div>
+            <nav class="nav">
+                <a href="#invite-section" class="nav-item">邀请好友</a>
+                <a href="#coupons-section" class="nav-item">我的优惠券</a>
+                <a href="#records-section" class="nav-item">邀请记录</a>
+            </nav>
+            <div class="user-info">
+                <span class="username">张三</span>
+                <img src="https://ui-avatars.com/api/?name=张三&background=4f46e5&color=fff" alt="头像" class="avatar">
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <main class="main">
+        <div class="container">
+            <!-- 整体统计概览 -->
+            <div class="overview-stats">
+                <div class="overview-card">
+                    <div class="overview-icon">👥</div>
+                    <div class="overview-content">
+                        <div class="overview-value">12</div>
+                        <div class="overview-label">累计邀请</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">🎫</div>
+                    <div class="overview-content">
+                        <div class="overview-value">5</div>
+                        <div class="overview-label">可用优惠券</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">💰</div>
+                    <div class="overview-content">
+                        <div class="overview-value">¥240</div>
+                        <div class="overview-label">累计优惠金额</div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-icon">✅</div>
+                    <div class="overview-content">
+                        <div class="overview-value">3</div>
+                        <div class="overview-label">已使用优惠券</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 邀请区域 -->
+            <div id="invite-section" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🎉 邀请好友，双方都有奖</h2>
+                    <p class="section-subtitle">好友注册送新人券，好友首次消费后你获得满减券</p>
+                </div>
+
+                <!-- 奖励说明区域 -->
+                <div class="rewards-banner">
+                    <div class="rewards-header">
+                        <span class="rewards-icon">🎁</span>
+                        <span class="rewards-header-text">奖励详情</span>
+                    </div>
+                    <div class="rewards-content">
+                        <!-- 邀请者奖励 -->
+                        <div class="reward-box inviter">
+                            <div class="reward-icon">👤</div>
+                            <div class="reward-info">
+                                <div class="reward-title">你获得</div>
+                                <div class="reward-detail">
+                                    <span class="highlight">满100减20元</span> 优惠券
+                                </div>
+                                <div class="reward-note">好友首次消费成功后发放</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 分隔符 -->
+                        <div class="reward-divider-simple">+</div>
+                        
+                        <!-- 被邀请者奖励 -->
+                        <div class="reward-box invitee">
+                            <div class="reward-icon">🎁</div>
+                            <div class="reward-info">
+                                <div class="reward-title">好友获得</div>
+                                <div class="reward-detail">
+                                    <span class="highlight">新人专享</span> 优惠券
+                                </div>
+                                <div class="reward-note">首次注册成功后立即发放</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invite-main-card">
+                    <!-- 左侧：邀请信息 -->
+                    <div class="invite-left">
+
+                        <!-- 邀请码 -->
+                        <div class="invite-code-section">
+                            <div class="invite-code-label">你的专属邀请码</div>
+                            <div class="invite-code-display">
+                                <div class="invite-code" id="inviteCode">ABC123</div>
+                                <button class="copy-btn" onclick="copyCode()">
+                                    <span class="btn-icon">📋</span>
+                                    <span>复制</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 邀请链接 -->
+                        <div class="invite-link-section">
+                            <div class="invite-link-label">专属邀请链接</div>
+                            <div class="invite-link-display">
+                                <input 
+                                    type="text" 
+                                    class="invite-link-input" 
+                                    id="inviteLink" 
+                                    value="https://example.com/register?invite=ABC123" 
+                                    readonly
+                                >
+                                <button class="copy-btn-small" onclick="copyLink()">复制</button>
+                            </div>
+                        </div>
+
+                        <!-- 分享按钮 -->
+                        <div class="share-section">
+                            <div class="share-title">快速分享到</div>
+                            <div class="share-buttons">
+                                <button class="share-btn" onclick="shareToWechat()">
+                                    <span>💬</span> 微信
+                                </button>
+                                <button class="share-btn" onclick="shareToQQ()">
+                                    <span>🐧</span> QQ
+                                </button>
+                                <button class="share-btn" onclick="shareToWeibo()">
+                                    <span>📱</span> 微博
+                                </button>
+                                <button class="share-btn" onclick="shareToEmail()">
+                                    <span>✉️</span> 邮件
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧：最近邀请记录 -->
+                    <div class="invite-right" id="records-section">
+                        <div class="records-header">
+                            <h3 class="records-title">最近邀请记录</h3>
+                            <span class="records-count">共12人</span>
+                        </div>
+                        <div class="records-list">
+                            <div class="record-item">
+                                <img src="https://ui-avatars.com/api/?name=李四&background=667eea&color=fff" alt="头像" class="record-avatar">
+                                <div class="record-info">
+                                    <div class="record-name">李四</div>
+                                    <div class="record-time">2024-11-25 14:30</div>
+                                </div>
+                                <div class="record-reward">+1张券</div>
+                            </div>
+
+                            <div class="record-item">
+                                <img src="https://ui-avatars.com/api/?name=王五&background=764ba2&color=fff" alt="头像" class="record-avatar">
+                                <div class="record-info">
+                                    <div class="record-name">王五</div>
+                                    <div class="record-time">2024-11-23 10:15</div>
+                                </div>
+                                <div class="record-reward">+1张券</div>
+                            </div>
+
+                            <div class="record-item">
+                                <img src="https://ui-avatars.com/api/?name=赵六&background=11998e&color=fff" alt="头像" class="record-avatar">
+                                <div class="record-info">
+                                    <div class="record-name">赵六</div>
+                                    <div class="record-time">2024-11-20 16:45</div>
+                                </div>
+                                <div class="record-reward">+1张券</div>
+                            </div>
+
+                            <div class="record-item">
+                                <img src="https://ui-avatars.com/api/?name=孙七&background=f093fb&color=fff" alt="头像" class="record-avatar">
+                                <div class="record-info">
+                                    <div class="record-name">孙七</div>
+                                    <div class="record-time">2024-11-18 09:20</div>
+                                </div>
+                                <div class="record-reward">+1张券</div>
+                            </div>
+
+                            <div class="record-item">
+                                <img src="https://ui-avatars.com/api/?name=周八&background=4facfe&color=fff" alt="头像" class="record-avatar">
+                                <div class="record-info">
+                                    <div class="record-name">周八</div>
+                                    <div class="record-time">2024-11-15 13:10</div>
+                                </div>
+                                <div class="record-reward">+1张券</div>
+                            </div>
+                        </div>
+                        <div class="records-footer">
+                            <a href="#" class="view-more">查看全部 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 优惠券区域 -->
+            <div id="coupons-section" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🎫 我的优惠券</h2>
+                    <div class="tabs">
+                        <button class="tab active" data-status="unused">可用 <span class="tab-count">5</span></button>
+                        <button class="tab" data-status="used">已使用 <span class="tab-count">3</span></button>
+                        <button class="tab" data-status="expired">已过期 <span class="tab-count">2</span></button>
+                    </div>
+                </div>
+
+                <!-- 优惠券列表 -->
+                <div class="coupons-grid" id="couponsContainer">
+                    <!-- 可用优惠券 -->
+                    <div class="coupon-card unused" data-status="unused">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024001</div>
+                            <div class="coupon-expire">有效期至: 2024-12-27</div>
+                            <div class="coupon-status-badge unused-badge">可使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card unused" data-status="unused">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024002</div>
+                            <div class="coupon-expire">有效期至: 2024-12-25</div>
+                            <div class="coupon-status-badge unused-badge">可使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card unused" data-status="unused">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024003</div>
+                            <div class="coupon-expire">有效期至: 2024-12-20</div>
+                            <div class="coupon-status-badge unused-badge">可使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card unused" data-status="unused">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024004</div>
+                            <div class="coupon-expire">有效期至: 2024-12-15</div>
+                            <div class="coupon-status-badge unused-badge">可使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card unused" data-status="unused">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024005</div>
+                            <div class="coupon-expire">有效期至: 2024-12-10</div>
+                            <div class="coupon-status-badge unused-badge">可使用</div>
+                        </div>
+                    </div>
+
+                    <!-- 已使用优惠券 -->
+                    <div class="coupon-card used" data-status="used">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024006</div>
+                            <div class="coupon-used-time">使用时间: 2024-11-20 14:30</div>
+                            <div class="coupon-status-badge used-badge">已使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card used" data-status="used">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024007</div>
+                            <div class="coupon-used-time">使用时间: 2024-11-18 10:15</div>
+                            <div class="coupon-status-badge used-badge">已使用</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card used" data-status="used">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024008</div>
+                            <div class="coupon-used-time">使用时间: 2024-11-15 16:45</div>
+                            <div class="coupon-status-badge used-badge">已使用</div>
+                        </div>
+                    </div>
+
+                    <!-- 已过期优惠券 -->
+                    <div class="coupon-card expired" data-status="expired">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024009</div>
+                            <div class="coupon-expire">过期时间: 2024-10-27</div>
+                            <div class="coupon-status-badge expired-badge">已过期</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-card expired" data-status="expired">
+                        <div class="coupon-left">
+                            <div class="coupon-amount">
+                                <span class="currency">¥</span>
+                                <span class="value">20</span>
+                            </div>
+                            <div class="coupon-condition">满100元可用</div>
+                        </div>
+                        <div class="coupon-divider">
+                            <div class="circle circle-top"></div>
+                            <div class="dashed-line"></div>
+                            <div class="circle circle-bottom"></div>
+                        </div>
+                        <div class="coupon-right">
+                            <div class="coupon-title">邀请奖励券</div>
+                            <div class="coupon-desc">邀请好友注册奖励</div>
+                            <div class="coupon-code">券码: INV2024010</div>
+                            <div class="coupon-expire">过期时间: 2024-10-20</div>
+                            <div class="coupon-status-badge expired-badge">已过期</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 空状态 -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-icon">📋</div>
+                    <div class="empty-text">暂无优惠券</div>
+                    <div class="empty-hint">快去邀请好友获得优惠券吧！</div>
+                    <a href="#invite-section" class="btn-primary">立即邀请</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
