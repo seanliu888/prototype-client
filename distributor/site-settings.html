@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM TOURS - Site Settings</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">😊</span>
+                <span class="logo-text">
+                    <span class="logo-text-pink">eSIM</span> <span class="logo-text-dark">TOURS</span>
+                </span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H17V17H3V3ZM2 1C1.44772 1 1 1.44772 1 2V18C1 18.5523 1.44772 19 2 19H18C18.5523 19 19 18.5523 19 18V2C19 1.44772 18.5523 1 18 1H2ZM4 5H16V6H4V5ZM4 7H16V8H4V7ZM4 9H16V10H4V9ZM4 11H16V12H4V11ZM4 13H16V14H4V13Z" fill="currentColor"/>
+                        <path d="M5 5H7V7H5V5ZM9 5H11V7H9V5ZM13 5H15V7H13V5Z" fill="currentColor"/>
+                    </svg>
+                    <span>Revenue Report</span>
+                </a>
+                
+                <div class="nav-item nav-item-parent expanded">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                        <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>Salesperson</span>
+                    <svg class="nav-arrow nav-arrow-up" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 7.5L6 4.5L9 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div class="nav-submenu">
+                    <a href="agent-lookup.html" class="nav-subitem">
+                        <span>Agent Lookup</span>
+                    </a>
+                    <a href="sales-commission.html" class="nav-subitem">
+                        <span>Sales Commission</span>
+                    </a>
+                </div>
+                
+                <div class="nav-item nav-item-parent expanded">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2L12.5 7.5L18.5 8.5L14.5 12.5L15.5 18.5L10 15.5L4.5 18.5L5.5 12.5L1.5 8.5L7.5 7.5L10 2Z" fill="currentColor"/>
+                    </svg>
+                    <span>Brand promotion</span>
+                    <svg class="nav-arrow nav-arrow-up" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 7.5L6 4.5L9 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div class="nav-submenu">
+                    <a href="site-settings.html" class="nav-subitem active">
+                        <span>Site Settings</span>
+                    </a>
+                    <a href="refer-invite.html" class="nav-subitem">
+                        <span>Refer & Invite</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 顶部栏 -->
+            <header class="top-header">
+                <div class="header-center">
+                    <a href="#" class="website-link">
+                        Go to website
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 3H13V11H11V3Z" fill="currentColor"/>
+                            <path d="M3 3H11V5H3V3Z" fill="currentColor"/>
+                            <path d="M3 3V5H5V3H3Z" fill="currentColor"/>
+                            <path d="M3 11H11V13H3V11Z" fill="currentColor"/>
+                            <path d="M11 11V13H13V11H11Z" fill="currentColor"/>
+                            <path d="M9 5H11V7H9V5Z" fill="currentColor"/>
+                            <path d="M7 7H9V9H7V7Z" fill="currentColor"/>
+                            <path d="M5 9H7V11H5V9Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="header-right">
+                    <div class="language-selector">
+                        <svg class="globe-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 10H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 1C12.3869 3.79086 13.5 6.72973 13.5 10C13.5 13.2703 12.3869 16.2091 10 19C7.6131 16.2091 6.5 13.2703 6.5 10C6.5 6.72973 7.6131 3.79086 10 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>English</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="user-menu-wrapper">
+                        <button class="header-icon-btn user-avatar">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                                <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <div class="user-menu">
+                            <a href="profile.html" class="user-menu-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z" fill="currentColor"/>
+                                    <path d="M8 9C6.34315 9 5 10.3431 5 12H11C11 10.3431 9.65685 9 8 9Z" fill="currentColor"/>
+                                </svg>
+                                <span>Profile</span>
+                            </a>
+                            <a href="index.html" class="user-menu-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 14H2C1.44772 14 1 13.5523 1 13V3C1 2.44772 1.44772 2 2 2H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11 12L15 8L11 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 8H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- 主内容 -->
+            <main class="content-area site-settings-page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <svg class="page-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15 9L22 10L17 15L18 22L12 18L6 22L7 15L2 10L9 9L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <h1>Brand promotion / Site Settings</h1>
+                    </div>
+                </div>
+                
+                <!-- Site Settings 内容 -->
+                <div class="site-settings-container">
+                    <!-- 左侧配置面板 -->
+                    <div class="settings-panel">
+                        <!-- General 部分 -->
+                        <div class="settings-section">
+                            <h3 class="settings-section-title">General</h3>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Custom Domain</label>
+                                <input type="text" class="settings-input" value="zhangsan.esimtours.com" readonly>
+                                <p class="settings-hint">This field cannot be updated later.</p>
+                                <p class="settings-hint">This field should contain 3 - 15 characters and no symbols</p>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Theme Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#ff6b9d">
+                                    <input type="text" class="color-hex-input" value="#ff6b9d">
+                                </div>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Theme Contrast Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#333333">
+                                    <input type="text" class="color-hex-input" value="#333333">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Header 部分 -->
+                        <div class="settings-section">
+                            <h3 class="settings-section-title">Header</h3>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Logo</label>
+                                <div class="file-upload-group">
+                                    <input type="file" id="logoUpload" class="file-input" accept="image/*">
+                                    <label for="logoUpload" class="file-upload-btn">选择文件</label>
+                                    <span class="file-status">未选择任何文件</span>
+                                </div>
+                                <p class="settings-hint">For optimal results, the ratio of width to height should be 8:3. Example: 240px X 90px.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Banner Text 部分 -->
+                        <div class="settings-section">
+                            <h3 class="settings-section-title">Banner Text</h3>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Banner Text</label>
+                                <input type="text" class="settings-input" value="Say hello to wallet roaming data friendly">
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Banner Background Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#FFFFFF">
+                                    <input type="text" class="color-hex-input" value="#FFFFFF">
+                                </div>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Banner Text Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#333333">
+                                    <input type="text" class="color-hex-input" value="#333333">
+                                </div>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Banner Image</label>
+                                <div class="file-upload-group">
+                                    <input type="file" id="bannerUpload" class="file-input" accept="image/*">
+                                    <label for="bannerUpload" class="file-upload-btn">选择文件</label>
+                                    <span class="file-status">未选择任何文件</span>
+                                </div>
+                                <p class="settings-hint">For optimal results, we suggest a square image. Example: 320px X 320px. The image file size must be under 1MB (1MB max) to ensure fast load times and a smooth user experience</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Content 部分 -->
+                        <div class="settings-section">
+                            <h3 class="settings-section-title">Main Content</h3>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Background Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#FFFFFF">
+                                    <input type="text" class="color-hex-input" value="#FFFFFF">
+                                </div>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Text Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#333333">
+                                    <input type="text" class="color-hex-input" value="#333333">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer 部分 -->
+                        <div class="settings-section">
+                            <h3 class="settings-section-title">Footer</h3>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Background Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#FFFFFF">
+                                    <input type="text" class="color-hex-input" value="#FFFFFF">
+                                </div>
+                            </div>
+                            
+                            <div class="settings-field">
+                                <label class="settings-label">Text Color</label>
+                                <div class="color-input-group">
+                                    <input type="color" class="color-picker" value="#333333">
+                                    <input type="text" class="color-hex-input" value="#333333">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 提交按钮 -->
+                        <div class="settings-actions">
+                            <button class="settings-done-btn">Done</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧预览区域 -->
+                    <div class="preview-panel">
+                        <div class="preview-container">
+                            <!-- 预览顶部栏 -->
+                            <div class="preview-header">
+                                <div class="preview-logo">
+                                    <span class="preview-logo-icon">😊</span>
+                                    <span class="preview-logo-text">
+                                        <span class="preview-logo-pink">eSIM</span> TOURS
+                                    </span>
+                                </div>
+                                <nav class="preview-nav">
+                                    <a href="#" class="preview-nav-item">About</a>
+                                    <a href="#" class="preview-nav-item">Compatibility</a>
+                                    <a href="#" class="preview-nav-item">eSIM Store</a>
+                                    <div class="preview-language">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 8H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 1C9.50953 2.79069 10.5 5.22973 10.5 8C10.5 10.7703 9.50953 13.2093 8 15C6.49047 13.2093 5.5 10.7703 5.5 8C5.5 5.22973 6.49047 2.79069 8 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>English</span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 3.75L5 6.25L7.5 3.75" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <button class="preview-login-btn">Log in</button>
+                                </nav>
+                            </div>
+                            
+                            <!-- 预览内容 -->
+                            <div class="preview-content">
+                                <!-- Hero Section -->
+                                <div class="preview-hero" id="previewHero">
+                                    <h2 class="preview-hero-text" id="previewBannerText">Say hello to wallet roaming data friendly</h2>
+                                    <div class="preview-hero-image" id="previewBannerImage">
+                                        <div class="placeholder-image">
+                                            <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <defs>
+                                                    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                        <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                                                        <stop offset="50%" style="stop-color:#87CEEB;stop-opacity:1" />
+                                                        <stop offset="100%" style="stop-color:#FFB347;stop-opacity:1" />
+                                                    </linearGradient>
+                                                </defs>
+                                                <rect width="400" height="400" fill="url(#skyGradient)"/>
+                                                <path d="M50 300 Q100 250 150 300 T250 300 T350 300" stroke="white" stroke-width="3" fill="none" opacity="0.6"/>
+                                                <path d="M80 320 Q130 270 180 320 T280 320 T380 320" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+                                                <path d="M200 200 L250 150 L300 200 L280 250 L220 250 Z" fill="white" opacity="0.8"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Popular Destinations Section -->
+                                <div class="preview-section">
+                                    <h3 class="preview-section-title">Popular eSIM Destinations</h3>
+                                    <div class="preview-search-bar">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 11C9.20914 11 11 9.20914 11 7C11 4.79086 9.20914 3 7 3C4.79086 3 3 4.79086 3 7C3 9.20914 4.79086 11 7 11Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13 13L10 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <input type="text" placeholder="@peauch for a gotinply" class="preview-search-input">
+                                    </div>
+                                    <div class="preview-toggles">
+                                        <button class="preview-toggle active">Country</button>
+                                        <button class="preview-toggle">Region</button>
+                                    </div>
+                                    <div class="preview-destinations-grid">
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇵🇷</span>
+                                            <span class="preview-country">Puerto Rico</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇵🇸</span>
+                                            <span class="preview-country">Palestine</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇵🇹</span>
+                                            <span class="preview-country">Portugal</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇵🇾</span>
+                                            <span class="preview-country">Paraguay</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇶🇦</span>
+                                            <span class="preview-country">Qatar</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇩</span>
+                                            <span class="preview-country">Andorra</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇪</span>
+                                            <span class="preview-country">United Arab Emirates</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇬</span>
+                                            <span class="preview-country">Antigua and Barbuda</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇮</span>
+                                            <span class="preview-country">Anguilla</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇱</span>
+                                            <span class="preview-country">Albania</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇲</span>
+                                            <span class="preview-country">Armenia</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="preview-destination-card">
+                                            <span class="preview-flag">🇦🇳</span>
+                                            <span class="preview-country">Netherlands Antilles</span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <button class="preview-see-more-btn">See more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="dashboard.js"></script>
+    <script src="site-settings.js"></script>
+</body>
+</html>
+

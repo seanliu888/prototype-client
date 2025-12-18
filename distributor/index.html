@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM TOURS - 登录</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Logo和标题 -->
+            <div class="logo-section">
+                <span class="logo-icon">😊</span>
+                <span class="logo-text">eSIM TOURS</span>
+            </div>
+            
+            <!-- 欢迎信息 -->
+            <div class="welcome-section">
+                <h1 class="welcome-title">Welcome</h1>
+                <p class="welcome-subtitle">Log in to eSIM TOURS to continue to Dashboard</p>
+            </div>
+            
+            <!-- 用户类型选择 -->
+            <div class="user-type-section">
+                <button class="user-type-btn active" data-type="distributor">Distributor</button>
+                <div class="divider"></div>
+                <button class="user-type-btn" data-type="salesperson">Salesperson</button>
+            </div>
+            
+            <!-- 登录表单 -->
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" class="form-input" placeholder="Enter email" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" class="form-input" placeholder="Enter password" required>
+                    <button type="button" class="password-toggle" id="passwordToggle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 3C5 3 1.73 7.11 1 10C1.73 12.89 5 17 10 17C15 17 18.27 12.89 19 10C18.27 7.11 15 3 10 3ZM10 15C7.24 15 5 12.76 5 10C5 7.24 7.24 5 10 5C12.76 5 15 7.24 15 10C15 12.76 12.76 15 10 15ZM10 7C8.34 7 7 8.34 7 10C7 11.66 8.34 13 10 13C11.66 13 13 11.66 13 10C13 8.34 11.66 7 10 7Z" fill="currentColor"/>
+                            <line x1="2" y1="2" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <!-- 忘记密码链接 -->
+            <div class="forgot-password">
+                <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+

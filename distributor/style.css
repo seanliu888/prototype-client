@@ -1,0 +1,391 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* 背景渐变 */
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        #f5c2e7 0%, 
+        #ffe4b5 25%,
+        #e0b0ff 50%,
+        #c8a2c8 75%,
+        #b0c4de 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 登录卡片 */
+.login-card {
+    background: white;
+    border-radius: 24px;
+    padding: 48px 40px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo区域 */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+/* 忘记密码页面的Logo居中 */
+.logo-section-centered {
+    justify-content: center;
+}
+
+.logo-icon {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+/* 欢迎区域 */
+.welcome-section {
+    margin-bottom: 32px;
+}
+
+.welcome-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.5;
+}
+
+/* 用户类型选择 */
+.user-type-section {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-type-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.user-type-btn:hover {
+    color: #333;
+}
+
+.user-type-btn.active {
+    color: #ff6b9d;
+}
+
+.user-type-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ff6b9d;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: #e0e0e0;
+    margin: 0 8px;
+}
+
+/* 表单样式 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+    background: white;
+    transition: all 0.3s;
+    padding-right: 48px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ff6b9d;
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+/* 密码显示/隐藏按钮 */
+.password-toggle {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.password-toggle:hover {
+    color: #666;
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 登录按钮 */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background: #ff5a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* 忘记密码链接 */
+.forgot-password {
+    text-align: center;
+}
+
+.forgot-link {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover {
+    color: #ff5a8a;
+    text-decoration: underline;
+}
+
+/* Logo文字样式 - 忘记密码页面 */
+.logo-text-pink {
+    color: #ff6b9d;
+}
+
+/* 忘记密码标题区域 */
+.forgot-title-section {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.forgot-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* 忘记密码页面输入框样式 - 与登录页统一 */
+.forgot-input {
+    background: white !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.forgot-input::placeholder {
+    color: #999 !important;
+}
+
+.forgot-input:focus {
+    background: white !important;
+    border-color: #ff6b9d !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1) !important;
+}
+
+/* 忘记密码页面密码切换图标样式 - 与登录页统一 */
+.forgot-toggle {
+    color: #999 !important;
+}
+
+.forgot-toggle:hover {
+    color: #666 !important;
+}
+
+/* 带链接的输入组 */
+.input-group-with-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.input-group-with-link .form-input {
+    flex: 1;
+    padding-right: 16px;
+}
+
+.verification-link {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.3s;
+    flex-shrink: 0;
+}
+
+.verification-link:hover {
+    color: #ff5a8a;
+    text-decoration: underline;
+}
+
+/* 提交按钮 - 白色边框样式 */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: white;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* 登录链接区域 */
+.login-link-section {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.login-link-text {
+    color: #999;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #ff5a8a;
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .login-card {
+        padding: 36px 28px;
+        border-radius: 20px;
+    }
+    
+    .welcome-title {
+        font-size: 28px;
+    }
+    
+    .forgot-title {
+        font-size: 28px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 13px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .input-group-with-link {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .verification-link {
+        text-align: right;
+        margin-top: -12px;
+        margin-bottom: 8px;
+    }
+}
+

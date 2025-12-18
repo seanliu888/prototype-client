@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM TOURS - Agent Lookup</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">😊</span>
+                <span class="logo-text">
+                    <span class="logo-text-pink">eSIM</span> <span class="logo-text-dark">TOURS</span>
+                </span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 3H17V17H3V3ZM2 1C1.44772 1 1 1.44772 1 2V18C1 18.5523 1.44772 19 2 19H18C18.5523 19 19 18.5523 19 18V2C19 1.44772 18.5523 1 18 1H2ZM4 5H16V6H4V5ZM4 7H16V8H4V7ZM4 9H16V10H4V9ZM4 11H16V12H4V11ZM4 13H16V14H4V13Z" fill="currentColor"/>
+                        <path d="M5 5H7V7H5V5ZM9 5H11V7H9V5ZM13 5H15V7H13V5Z" fill="currentColor"/>
+                    </svg>
+                    <span>Revenue Report</span>
+                </a>
+                
+                <div class="nav-item nav-item-parent expanded">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                        <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                    </svg>
+                    <span>Salesperson</span>
+                    <svg class="nav-arrow nav-arrow-up" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 7.5L6 4.5L9 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div class="nav-submenu">
+                    <a href="agent-lookup.html" class="nav-subitem active">
+                        <span>Agent Lookup</span>
+                    </a>
+                    <a href="sales-commission.html" class="nav-subitem">
+                        <span>Sales Commission</span>
+                    </a>
+                </div>
+                
+                <div class="nav-item nav-item-parent">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2L12.5 7.5L18.5 8.5L14.5 12.5L15.5 18.5L10 15.5L4.5 18.5L5.5 12.5L1.5 8.5L7.5 7.5L10 2Z" fill="currentColor"/>
+                    </svg>
+                    <span>Brand promotion</span>
+                    <svg class="nav-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div class="nav-submenu">
+                    <a href="site-settings.html" class="nav-subitem">
+                        <span>Site Settings</span>
+                    </a>
+                    <a href="refer-invite.html" class="nav-subitem">
+                        <span>Refer & Invite</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 顶部栏 -->
+            <header class="top-header">
+                <div class="header-center">
+                    <a href="#" class="website-link">
+                        Go to website
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 3H13V11H11V3Z" fill="currentColor"/>
+                            <path d="M3 3H11V5H3V3Z" fill="currentColor"/>
+                            <path d="M3 3V5H5V3H3Z" fill="currentColor"/>
+                            <path d="M3 11H11V13H3V11Z" fill="currentColor"/>
+                            <path d="M11 11V13H13V11H11Z" fill="currentColor"/>
+                            <path d="M9 5H11V7H9V5Z" fill="currentColor"/>
+                            <path d="M7 7H9V9H7V7Z" fill="currentColor"/>
+                            <path d="M5 9H7V11H5V9Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="header-right">
+                    <div class="language-selector">
+                        <svg class="globe-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 10H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 1C12.3869 3.79086 13.5 6.72973 13.5 10C13.5 13.2703 12.3869 16.2091 10 19C7.6131 16.2091 6.5 13.2703 6.5 10C6.5 6.72973 7.6131 3.79086 10 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>English</span>
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="user-menu-wrapper">
+                        <button class="header-icon-btn user-avatar">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                                <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <div class="user-menu">
+                            <a href="profile.html" class="user-menu-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8C9.10457 8 10 7.10457 10 6C10 4.89543 9.10457 4 8 4C6.89543 4 6 4.89543 6 6C6 7.10457 6.89543 8 8 8Z" fill="currentColor"/>
+                                    <path d="M8 9C6.34315 9 5 10.3431 5 12H11C11 10.3431 9.65685 9 8 9Z" fill="currentColor"/>
+                                </svg>
+                                <span>Profile</span>
+                            </a>
+                            <a href="index.html" class="user-menu-item">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 14H2C1.44772 14 1 13.5523 1 13V3C1 2.44772 1.44772 2 2 2H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11 12L15 8L11 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 8H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- 主内容 -->
+            <main class="content-area">
+                <div class="page-header">
+                    <div class="page-title">
+                        <svg class="page-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                            <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                        </svg>
+                        <h1>Salesperson Management / Agent Lookup</h1>
+                    </div>
+                </div>
+                
+                <!-- 操作栏 -->
+                <div class="action-bar">
+                    <div class="action-search">
+                        <svg class="search-icon-small" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 15L11.72 11.72" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" placeholder="Search" class="action-search-input">
+                    </div>
+                    <button class="add-reseller-btn">
+                        <span>+ Add a salesperson</span>
+                    </button>
+                </div>
+                
+                <!-- 数据表格 -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Name</th>
+                                <th>Email Address</th>
+                                <th>Phone Number</th>
+                                <th>Cashback Rate</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-name="William" data-email="zhusdh@gmail.com" data-phone="+86" data-phone-number="13212343662" data-rebate="3">
+                                <td>1</td>
+                                <td>William</td>
+                                <td>zhusdh@gmail.com</td>
+                                <td>+86 132****3662</td>
+                                <td>3%</td>
+                                <td>
+                                    <div class="action-dropdown">
+                                        <button class="action-menu-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="4" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <div class="action-menu">
+                                            <a href="#" class="action-menu-item edit-item">Edit</a>
+                                            <a href="#" class="action-menu-item">More details</a>
+                                            <a href="#" class="action-menu-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-name="John Smith" data-email="john.smith@example.com" data-phone="+1" data-phone-number="5551234567" data-rebate="5">
+                                <td>2</td>
+                                <td>John Smith</td>
+                                <td>john.smith@example.com</td>
+                                <td>+1 555****567</td>
+                                <td>5%</td>
+                                <td>
+                                    <div class="action-dropdown">
+                                        <button class="action-menu-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="4" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <div class="action-menu">
+                                            <a href="#" class="action-menu-item edit-item">Edit</a>
+                                            <a href="#" class="action-menu-item">More details</a>
+                                            <a href="#" class="action-menu-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-name="Emma Johnson" data-email="emma.j@example.com" data-phone="+44" data-phone-number="2071234567" data-rebate="4">
+                                <td>3</td>
+                                <td>Emma Johnson</td>
+                                <td>emma.j@example.com</td>
+                                <td>+44 207****567</td>
+                                <td>4%</td>
+                                <td>
+                                    <div class="action-dropdown">
+                                        <button class="action-menu-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="4" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <div class="action-menu">
+                                            <a href="#" class="action-menu-item edit-item">Edit</a>
+                                            <a href="#" class="action-menu-item">More details</a>
+                                            <a href="#" class="action-menu-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-name="Michael Chen" data-email="michael.chen@example.com" data-phone="+86" data-phone-number="13812345678" data-rebate="6">
+                                <td>4</td>
+                                <td>Michael Chen</td>
+                                <td>michael.chen@example.com</td>
+                                <td>+86 138****5678</td>
+                                <td>6%</td>
+                                <td>
+                                    <div class="action-dropdown">
+                                        <button class="action-menu-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="4" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <div class="action-menu">
+                                            <a href="#" class="action-menu-item edit-item">Edit</a>
+                                            <a href="#" class="action-menu-item">More details</a>
+                                            <a href="#" class="action-menu-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr data-name="Sarah Williams" data-email="sarah.w@example.com" data-phone="+1" data-phone-number="4159876543" data-rebate="3.5">
+                                <td>5</td>
+                                <td>Sarah Williams</td>
+                                <td>sarah.w@example.com</td>
+                                <td>+1 415****543</td>
+                                <td>3.5%</td>
+                                <td>
+                                    <div class="action-dropdown">
+                                        <button class="action-menu-btn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="4" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+                                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <div class="action-menu">
+                                            <a href="#" class="action-menu-item edit-item">Edit</a>
+                                            <a href="#" class="action-menu-item">More details</a>
+                                            <a href="#" class="action-menu-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 分页 -->
+                <div class="pagination">
+                    <div class="pagination-info">
+                        <span>Total 175 items</span>
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="page-btn" disabled>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <span class="page-ellipsis">...</span>
+                        <button class="page-number">17</button>
+                        <button class="page-number">18</button>
+                        <button class="page-btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="items-per-page">
+                            <select class="items-select">
+                                <option value="10">10 items/page</option>
+                                <option value="20">20 items/page</option>
+                                <option value="50">50 items/page</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- 模态弹窗 -->
+    <div class="modal-overlay" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Salesperson Details</h2>
+                <button class="modal-close" id="closeModal">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Basic Information -->
+                <div class="modal-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
+                            <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
+                        </svg>
+                        <h3 class="section-title">Basic Information</h3>
+                    </div>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Salesperson ID:</span>
+                            <span class="info-value">#S10001</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">William</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">zhusdh@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Mobile phone:</span>
+                            <span class="info-value">+86 132****3662</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Cashback Rate:</span>
+                            <span class="info-value cashback-rate">3%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recommended content -->
+                <div class="modal-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2L12.5 7.5L18.5 8.5L14.5 12.5L15.5 18.5L10 15.5L4.5 18.5L5.5 12.5L1.5 8.5L7.5 7.5L10 2Z" fill="currentColor"/>
+                        </svg>
+                        <h3 class="section-title">Recommended content</h3>
+                    </div>
+                    <div class="referral-fields">
+                        <div class="referral-field">
+                            <label class="referral-label">Your referral code</label>
+                            <div class="referral-input-group">
+                                <input type="text" class="referral-input" value="GGU739HGB7B" readonly>
+                                <button class="copy-btn" data-copy="GGU739HGB7B">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="referral-field">
+                            <label class="referral-label">Your Invitation Link</label>
+                            <div class="referral-input-group">
+                                <input type="text" class="referral-input" value="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B" readonly>
+                                <button class="copy-btn" data-copy="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QR Code -->
+                <div class="modal-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Your Referral QR Code</h3>
+                    </div>
+                    <div class="qr-code-section">
+                        <div class="qr-code-container">
+                            <div class="qr-code-placeholder">
+                                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- QR Code pattern (simplified representation) -->
+                                    <rect width="200" height="200" fill="white"/>
+                                    <rect x="20" y="20" width="40" height="40" fill="black"/>
+                                    <rect x="30" y="30" width="20" height="20" fill="white"/>
+                                    <rect x="140" y="20" width="40" height="40" fill="black"/>
+                                    <rect x="150" y="30" width="20" height="20" fill="white"/>
+                                    <rect x="20" y="140" width="40" height="40" fill="black"/>
+                                    <rect x="30" y="150" width="20" height="20" fill="white"/>
+                                    <circle cx="100" cy="100" r="15" fill="#ff6b9d"/>
+                                    <rect x="80" y="80" width="40" height="40" fill="black"/>
+                                    <rect x="90" y="90" width="20" height="20" fill="white"/>
+                                    <!-- More QR pattern elements -->
+                                    <rect x="20" y="80" width="8" height="8" fill="black"/>
+                                    <rect x="32" y="80" width="8" height="8" fill="black"/>
+                                    <rect x="80" y="20" width="8" height="8" fill="black"/>
+                                    <rect x="92" y="20" width="8" height="8" fill="black"/>
+                                    <rect x="140" y="80" width="8" height="8" fill="black"/>
+                                    <rect x="152" y="80" width="8" height="8" fill="black"/>
+                                    <rect x="80" y="140" width="8" height="8" fill="black"/>
+                                    <rect x="92" y="140" width="8" height="8" fill="black"/>
+                                </svg>
+                            </div>
+                            <p class="qr-code-hint">Share QR code to invite customers</p>
+                        </div>
+                        <button class="download-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 13V3M10 13L6 9M10 13L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 16H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 添加/编辑业务员模态弹窗 -->
+    <div class="modal-overlay" id="addResellerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="resellerModalTitle">Add a salesperson</h2>
+                <button class="modal-close" id="closeAddResellerModal">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <form class="add-reseller-form" id="addResellerForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                Name <span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-input-field" id="resellerName" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <input type="email" class="form-input-field" id="resellerEmail" placeholder="Enter email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                Phone Number <span class="required">*</span>
+                            </label>
+                            <div class="phone-input-group">
+                                <select class="country-code-select" id="resellerCountryCode">
+                                    <option value="+1">+1</option>
+                                    <option value="+86">+86</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+33">+33</option>
+                                    <option value="+49">+49</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+82">+82</option>
+                                    <option value="+65">+65</option>
+                                    <option value="+852">+852</option>
+                                    <option value="+853">+853</option>
+                                </select>
+                                <input type="tel" class="form-input-field phone-input" id="resellerPhone" placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                Cashback Rate <span class="required">*</span>
+                            </label>
+                            <input type="number" class="form-input-field" id="resellerRebate" placeholder="Enter cashback rate" step="0.1" min="0" max="100" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="submit-reseller-btn" id="submitResellerBtn">Add Salesperson</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        console.log('HTML中的内联脚本已执行');
+    </script>
+    <script src="dashboard.js"></script>
+    <script src="agent-lookup.js"></script>
+    <script>
+        console.log('所有脚本标签后的内联脚本已执行');
+    </script>
+</body>
+</html>
+
