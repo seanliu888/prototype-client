@@ -141,14 +141,24 @@
                 </div>
                 
                 <div class="date-filter">
-                    <span class="filter-label">Filter:</span>
+                    <div class="filter-selector-wrapper">
+                        <label for="typeFilter" class="filter-label">Type:</label>
+                        <select id="typeFilter" class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="Order Commission">Order Commission</option>
+                            <option value="Withdrawal">Withdrawal</option>
+                            <option value="Order Refund">Order Refund</option>
+                        </select>
+                    </div>
                     <div class="date-input-wrapper">
+                        <label for="startDate" class="date-label">Start Date</label>
                         <input type="date" id="startDate" class="date-input">
                         <svg class="date-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 2H13V14H3V2ZM2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2ZM4 4H12V5H4V4ZM4 6H12V7H4V6ZM4 8H12V9H4V8ZM4 10H12V11H4V10Z" fill="currentColor"/>
                         </svg>
                     </div>
                     <div class="date-input-wrapper">
+                        <label for="endDate" class="date-label">End Date</label>
                         <input type="date" id="endDate" class="date-input">
                         <svg class="date-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 2H13V14H3V2ZM2 1C1.44772 1 1 1.44772 1 2V14C1 14.5523 1.44772 15 2 15H14C14.5523 15 15 14.5523 15 14V2C15 1.44772 14.5523 1 14 1H2ZM4 4H12V5H4V4ZM4 6H12V7H4V6ZM4 8H12V9H4V8ZM4 10H12V11H4V10Z" fill="currentColor"/>
