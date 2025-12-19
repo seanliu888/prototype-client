@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // 根据用户类型跳转到不同页面
-            if (activeUserType === 'salesperson') {
+            if (activeUserType === 'reseller') {
                 window.location.href = 'earnings-report.html';
             } else {
                 window.location.href = 'dashboard.html';

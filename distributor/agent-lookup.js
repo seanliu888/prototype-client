@@ -1,4 +1,4 @@
-// Agent Lookup页面交互功能
+// Reseller页面交互功能
 console.log('agent-lookup.js 文件已加载');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -65,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 addResellerForm.reset();
             }
             if (resellerModalTitle) {
-                resellerModalTitle.textContent = 'Add a salesperson';
+                resellerModalTitle.textContent = 'Add a reseller';
             }
             if (submitResellerBtn) {
-                submitResellerBtn.textContent = 'Add Salesperson';
+                submitResellerBtn.textContent = 'Add Reseller';
             }
             if (addResellerModal) {
                 addResellerModal.classList.add('active');
@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // 切换到编辑模式
             isEditMode = true;
             currentEditRow = row;
-            if (resellerModalTitle) resellerModalTitle.textContent = 'Edit Salesperson';
-            if (submitResellerBtn) submitResellerBtn.textContent = 'Update Salesperson';
+            if (resellerModalTitle) resellerModalTitle.textContent = 'Edit Reseller';
+            if (submitResellerBtn) submitResellerBtn.textContent = 'Update Reseller';
             
             // 打开弹窗
             if (addResellerModal) {
@@ -212,8 +212,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 isEditMode = false;
                 currentEditRow = null;
-                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a salesperson';
-                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Salesperson';
+                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a reseller';
+                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Reseller';
             }
         });
     }
@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 isEditMode = false;
                 currentEditRow = null;
-                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a salesperson';
-                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Salesperson';
+                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a reseller';
+                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Reseller';
             }
         });
     }

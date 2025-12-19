@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Brand promotion 和 Salesperson 菜单展开/收起
+    // Branding 和 Reseller 菜单展开/收起
     const navItemParents = document.querySelectorAll('.nav-item-parent');
     navItemParents.forEach(parent => {
         parent.addEventListener('click', function(e) {
@@ -99,6 +99,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchTerm = this.value.toLowerCase();
             console.log('搜索:', searchTerm);
             // 这里可以添加实际的搜索逻辑
+        });
+    }
+    
+    // 日期筛选功能
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+    
+    if (startDateInput && endDateInput) {
+        startDateInput.addEventListener('change', function() {
+            console.log('开始日期:', this.value);
+            // 这里可以添加日期筛选逻辑
+        });
+        
+        endDateInput.addEventListener('change', function() {
+            console.log('结束日期:', this.value);
+            // 这里可以添加日期筛选逻辑
         });
     }
     
