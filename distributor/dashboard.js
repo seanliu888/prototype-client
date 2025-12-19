@@ -102,6 +102,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Reseller筛选功能
+    const resellerFilter = document.getElementById('resellerFilter');
+    if (resellerFilter) {
+        resellerFilter.addEventListener('change', function() {
+            console.log('Reseller筛选:', this.value);
+            filterTable();
+        });
+    }
+    
+    // Type筛选功能
+    const typeFilter = document.getElementById('typeFilter');
+    if (typeFilter) {
+        typeFilter.addEventListener('change', function() {
+            console.log('Type筛选:', this.value);
+            filterTable();
+        });
+    }
+    
     // 日期筛选功能
     const startDateInput = document.getElementById('startDate');
     const endDateInput = document.getElementById('endDate');
@@ -109,12 +127,65 @@ document.addEventListener('DOMContentLoaded', function() {
     if (startDateInput && endDateInput) {
         startDateInput.addEventListener('change', function() {
             console.log('开始日期:', this.value);
-            // 这里可以添加日期筛选逻辑
+            filterTable();
         });
         
         endDateInput.addEventListener('change', function() {
             console.log('结束日期:', this.value);
-            // 这里可以添加日期筛选逻辑
+            filterTable();
+        });
+    }
+    
+    // 表格筛选函数
+    function filterTable() {
+        const resellerValue = resellerFilter ? resellerFilter.value.toLowerCase() : '';
+        const typeValue = typeFilter ? typeFilter.value.toLowerCase() : '';
+        const startDateValue = startDateInput ? startDateInput.value : '';
+        const endDateValue = endDateInput ? endDateInput.value : '';
+        
+        const tableRows = document.querySelectorAll('.data-table tbody tr');
+        
+        tableRows.forEach(row => {
+            let showRow = true;
+            
+            // Reseller筛选（检查Referral列）
+            if (resellerValue) {
+                const referralCell = row.cells[3]; // Referral列是第4列（索引3）
+                if (referralCell && !referralCell.textContent.toLowerCase().includes(resellerValue)) {
+                    showRow = false;
+                }
+            }
+            
+            // Type筛选
+            if (typeValue && showRow) {
+                const typeCell = row.cells[1]; // Type列是第2列（索引1）
+                if (typeCell && !typeCell.textContent.toLowerCase().includes(typeValue)) {
+                    showRow = false;
+                }
+            }
+            
+            // 日期筛选
+            if (startDateValue && showRow) {
+                const dateCell = row.cells[6]; // Date列是第7列（索引6）
+                if (dateCell) {
+                    const rowDate = dateCell.textContent.trim();
+                    if (rowDate < startDateValue) {
+                        showRow = false;
+                    }
+                }
+            }
+            
+            if (endDateValue && showRow) {
+                const dateCell = row.cells[6]; // Date列是第7列（索引6）
+                if (dateCell) {
+                    const rowDate = dateCell.textContent.trim();
+                    if (rowDate > endDateValue) {
+                        showRow = false;
+                    }
+                }
+            }
+            
+            row.style.display = showRow ? '' : 'none';
         });
     }
     

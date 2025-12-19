@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eSIM TOURS - Settings</title>
+    <title>eSIM TOURS - Refer & Invite</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
                     <span>Report</span>
                 </a>
                 
-                <a href="salesperson-refer-invite.html" class="nav-item">
+                <a href="salesperson-refer-invite.html" class="nav-item active">
                     <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 2L12.5 7.5L18.5 8.5L14.5 12.5L15.5 18.5L10 15.5L4.5 18.5L5.5 12.5L1.5 8.5L7.5 7.5L10 2Z" fill="currentColor"/>
                     </svg>
@@ -98,66 +98,84 @@
             </header>
             
             <!-- 主内容 -->
-            <main class="content-area">
+            <main class="content-area refer-invite-page">
                 <div class="page-header">
                     <div class="page-title">
-                        <a href="salesperson-profile.html" class="breadcrumb-link" style="display: flex; align-items: center; gap: 4px; margin-right: 12px; color: #666; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ff6b9d'" onmouseout="this.style.color='#666'">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Profile</span>
-                        </a>
                         <svg class="page-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12Z" fill="currentColor"/>
-                            <path d="M12 13.5C9.92893 13.5 8.25 15.1789 8.25 17.25H15.75C15.75 15.1789 14.0711 13.5 12 13.5Z" fill="currentColor"/>
+                            <path d="M12 2L15 9L22 10L17 15L18 22L12 18L6 22L7 15L2 10L9 9L12 2Z" fill="currentColor"/>
                         </svg>
-                        <h1>Settings</h1>
+                        <h1>Refer & Invite</h1>
                     </div>
                 </div>
                 
-                <!-- Settings 内容包装器 -->
-                <div class="profile-content-wrapper">
-                    <!-- 用户概览卡片 -->
-                    <div class="profile-overview-card">
-                    <div class="profile-avatar-large">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="#ff6b9d"/>
-                            <path d="M40 40C46.6274 40 52 34.6274 52 28C52 21.3726 46.6274 16 40 16C33.3726 16 28 21.3726 28 28C28 34.6274 33.3726 40 40 40Z" fill="white"/>
-                            <path d="M40 42C30.6112 42 23 49.6112 23 59H57C57 49.6112 49.3888 42 40 42Z" fill="white"/>
-                        </svg>
+                <!-- Refer & Invite 内容卡片 -->
+                <div class="refer-invite-card-wrapper">
+                    <div class="refer-invite-card">
+                        <h2 class="refer-invite-title">Share a Site Recommendation</h2> 
+                        <!-- 邀请链接部分 -->
+                        <div class="referral-section">
+                            <label class="referral-label">Your Invitation Link</label>
+                            <div class="referral-input-group">
+                                <input type="text" class="referral-input" value="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B" readonly>
+                                <button class="copy-btn referral-copy-btn" data-copy="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- QR Code部分 -->
+                        <div class="referral-section">
+                            <label class="referral-label">Share QR code to invite customers.</label>
+                            <div class="qr-code-wrapper">
+                                <div class="qr-code-box">
+                                    <div class="qr-code-image">
+                                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- QR Code pattern -->
+                                            <rect width="200" height="200" fill="white"/>
+                                            <rect x="20" y="20" width="40" height="40" fill="black"/>
+                                            <rect x="30" y="30" width="20" height="20" fill="white"/>
+                                            <rect x="140" y="20" width="40" height="40" fill="black"/>
+                                            <rect x="150" y="30" width="20" height="20" fill="white"/>
+                                            <rect x="20" y="140" width="40" height="40" fill="black"/>
+                                            <rect x="30" y="150" width="20" height="20" fill="white"/>
+                                            <circle cx="100" cy="100" r="15" fill="#ff6b9d"/>
+                                            <rect x="80" y="80" width="40" height="40" fill="black"/>
+                                            <rect x="90" y="90" width="20" height="20" fill="white"/>
+                                            <!-- More QR pattern elements -->
+                                            <rect x="20" y="80" width="8" height="8" fill="black"/>
+                                            <rect x="32" y="80" width="8" height="8" fill="black"/>
+                                            <rect x="80" y="20" width="8" height="8" fill="black"/>
+                                            <rect x="92" y="20" width="8" height="8" fill="black"/>
+                                            <rect x="140" y="80" width="8" height="8" fill="black"/>
+                                            <rect x="152" y="80" width="8" height="8" fill="black"/>
+                                            <rect x="80" y="140" width="8" height="8" fill="black"/>
+                                            <rect x="92" y="140" width="8" height="8" fill="black"/>
+                                            <rect x="60" y="60" width="4" height="4" fill="black"/>
+                                            <rect x="136" y="60" width="4" height="4" fill="black"/>
+                                            <rect x="60" y="136" width="4" height="4" fill="black"/>
+                                        </svg>
+                                    </div>
+                                    <button class="qr-copy-btn">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                            <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="qr-code-hint">Share QR code to invite customers</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="profile-info">
-                        <h2 class="profile-name">Zhang San</h2>
-                        <p class="profile-email">zhangsan@gmail.com</p>
-                    </div>
-                </div>
-                
-                <!-- 重置密码部分 -->
-                <div class="profile-section">
-                    <h3 class="profile-section-title">Change Password</h3>
-                    
-                    <div class="password-form">
-                        <div class="password-field">
-                            <input type="password" class="password-input" placeholder="Old Password">
-                        </div>
-                        <div class="password-field">
-                            <input type="password" class="password-input" placeholder="New Password">
-                        </div>
-                        <div class="password-field">
-                            <input type="password" class="password-input" placeholder="Confirm Password">
-                        </div>
-                        <div class="password-actions">
-                            <button class="password-save-btn">Save</button>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </main>
         </div>
     </div>
     
     <script src="dashboard.js"></script>
-    <script src="settings.js"></script>
+    <script src="refer-invite.js"></script>
 </body>
 </html>
 
