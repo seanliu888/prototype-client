@@ -151,7 +151,7 @@
                                 <th>Name</th>
                                 <th>Email Address</th>
                                 <th>Phone Number</th>
-                                <th>Referral Discount</th>
+                                <th>Commission Rate</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -349,9 +349,62 @@
                             <span class="info-label">Mobile phone:</span>
                             <span class="info-value">+86 132****3662</span>
                         </div>
-                        <div class="info-item">
-                            <span class="info-label">Referral Discount:</span>
-                            <span class="info-value cashback-rate">3%</span>
+                        <div class="info-item" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span class="info-label">Commission Rate:</span>
+                                <span class="info-value cashback-rate">3%</span>
+                            </div>
+                            <p class="form-hint" style="font-size: 12px; color: #999; margin: 0; padding-left: 128px;">
+                                Reseller Commission = Share × Commission Rate (%)
+                            </p>
+                        </div>
+                        <div class="info-item" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+                            <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
+                                <span class="info-label">Password:</span>
+                                <span class="info-value" id="currentPasswordDisplay" style="color: #999;">••••••••</span>
+                                <button type="button" class="reset-password-btn" id="resetPasswordBtn">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M8 5V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M5 8H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Reset Password</span>
+                                </button>
+                            </div>
+                            <div class="reset-password-form" id="resetPasswordForm" style="display: none; width: 100%; margin-top: 8px;">
+                                <div class="password-input-group" style="margin-bottom: 8px;">
+                                    <input type="password" class="form-input-field password-input" id="resetPasswordInput" placeholder="Leave empty to auto-generate" style="flex: 1;">
+                                    <button type="button" class="generate-password-btn" id="generateResetPasswordBtn">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                            <path d="M8 5V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                            <path d="M5 8H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                        <span>Generate</span>
+                                    </button>
+                                </div>
+                                <p class="password-hint" style="margin-bottom: 8px;">If left empty, a random password will be automatically generated</p>
+                                <div class="generated-password-display" id="resetGeneratedPasswordDisplay" style="display: none; margin-top: 8px;">
+                                    <label class="form-label" style="font-size: 13px; margin-bottom: 8px; color: #666;">Generated Password:</label>
+                                    <div class="password-display-box">
+                                        <span class="password-text" id="resetGeneratedPasswordText"></span>
+                                        <button type="button" class="copy-password-btn" id="copyResetPasswordBtn">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                                <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 8px; margin-top: 12px;">
+                                    <button type="button" class="submit-reseller-btn" id="confirmResetPasswordBtn" style="min-width: 120px; padding: 10px 20px; font-size: 14px;">
+                                        Confirm
+                                    </button>
+                                    <button type="button" class="cancel-reset-password-btn" id="cancelResetPasswordBtn" style="min-width: 120px; padding: 10px 20px; font-size: 14px; background: #f9f9f9; color: #666; border: 1px solid #e0e0e0;">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -366,7 +419,7 @@
                     </div>
                     <div class="referral-fields">
                         <div class="referral-field">
-                            <label class="referral-label">Your referral code</label>
+                            <label class="referral-label">Reseller's referral code</label>
                             <div class="referral-input-group">
                                 <input type="text" class="referral-input" value="GGU739HGB7B" readonly>
                                 <button class="copy-btn" data-copy="GGU739HGB7B">
@@ -378,7 +431,7 @@
                             </div>
                         </div>
                         <div class="referral-field">
-                            <label class="referral-label">Your Invitation Link</label>
+                            <label class="referral-label">Reseller's Invitation Link</label>
                             <div class="referral-input-group">
                                 <input type="text" class="referral-input" value="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B" readonly>
                                 <button class="copy-btn" data-copy="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B">
@@ -395,7 +448,7 @@
                 <!-- QR Code -->
                 <div class="modal-section">
                     <div class="section-header">
-                        <h3 class="section-title">Your Referral QR Code</h3>
+                        <h3 class="section-title">Reseller's Referral QR Code</h3>
                     </div>
                     <div class="qr-code-section">
                         <div class="qr-code-container">
@@ -490,9 +543,44 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">
-                                Referral Discount <span class="required">*</span>
+                                Commission Rate <span class="required">*</span>
                             </label>
-                            <input type="number" class="form-input-field" id="resellerRebate" placeholder="Enter referral discount" step="0.1" min="0" max="100" required>
+                            <input type="number" class="form-input-field" id="resellerRebate" placeholder="Enter commission rate" step="0.1" min="0" max="100" required>
+                            <p class="form-hint" style="font-size: 12px; color: #999; margin-top: 6px; margin-bottom: 0;">
+                                Reseller Commission = Share × Commission Rate (%)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">
+                                Initial Password
+                            </label>
+                            <div class="password-input-group">
+                                <input type="password" class="form-input-field password-input" id="resellerPassword" placeholder="Leave empty to auto-generate">
+                                <button type="button" class="generate-password-btn" id="generatePasswordBtn">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        <path d="M8 5V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M5 8H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span>Generate</span>
+                                </button>
+                            </div>
+                            <p class="password-hint">If left empty, a random password will be automatically generated</p>
+                            <div class="generated-password-display" id="generatedPasswordDisplay" style="display: none; margin-top: 12px;">
+                                <label class="form-label" style="font-size: 13px; margin-bottom: 8px; color: #666;">Generated Password:</label>
+                                <div class="password-display-box">
+                                    <span class="password-text" id="generatedPasswordText"></span>
+                                    <button type="button" class="copy-password-btn" id="copyPasswordBtn">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="5" y="5" width="10" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                            <path d="M3 11V3C3 1.89543 3.89543 1 5 1H11" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     

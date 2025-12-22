@@ -1993,6 +1993,32 @@ body {
     font-weight: 600;
 }
 
+.reset-password-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.reset-password-btn:hover {
+    background: #ff6b9d;
+    color: white;
+    border-color: #ff6b9d;
+}
+
+.reset-password-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
 .referral-fields {
     display: flex;
     flex-direction: column;
@@ -2203,6 +2229,122 @@ body {
 
 .phone-input {
     flex: 1;
+}
+
+.password-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.password-input {
+    flex: 1;
+}
+
+.generate-password-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.generate-password-btn:hover {
+    background: #ff6b9d;
+    color: white;
+    border-color: #ff6b9d;
+}
+
+.generate-password-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.password-hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.generated-password-display {
+    margin-top: 8px;
+}
+
+.password-display-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+}
+
+.password-text {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #0369a1;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.copy-password-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: white;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #0369a1;
+}
+
+.copy-password-btn:hover {
+    background: #0369a1;
+    color: white;
+    border-color: #0369a1;
+}
+
+.copy-password-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cancel-reset-password-btn {
+    background: #f9f9f9;
+    color: #666;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 120px;
+}
+
+.cancel-reset-password-btn:hover {
+    background: #e9e9e9;
+    border-color: #d0d0d0;
+    color: #333;
+}
+
+.reset-password-form {
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
 .form-actions {
