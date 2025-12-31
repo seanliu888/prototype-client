@@ -72,10 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 resellerPasswordInput.type = 'password';
             }
             if (resellerModalTitle) {
-                resellerModalTitle.textContent = 'Add a reseller';
+                resellerModalTitle.textContent = 'Add a sales agent';
             }
             if (submitResellerBtn) {
-                submitResellerBtn.textContent = 'Add Reseller';
+                submitResellerBtn.textContent = 'Add Sales Agent';
             }
             if (addResellerModal) {
                 addResellerModal.classList.add('active');
@@ -215,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // 切换到编辑模式
             isEditMode = true;
             currentEditRow = row;
-            if (resellerModalTitle) resellerModalTitle.textContent = 'Edit Reseller';
-            if (submitResellerBtn) submitResellerBtn.textContent = 'Update Reseller';
+            if (resellerModalTitle) resellerModalTitle.textContent = 'Edit Sales Agent';
+            if (submitResellerBtn) submitResellerBtn.textContent = 'Update Sales Agent';
             
             // 打开弹窗
             if (addResellerModal) {
@@ -312,8 +312,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             isEditMode = false;
             currentEditRow = null;
-            if (resellerModalTitle) resellerModalTitle.textContent = 'Add a Reseller';
-            if (submitResellerBtn) submitResellerBtn.textContent = 'Add Reseller';
+            if (resellerModalTitle) resellerModalTitle.textContent = 'Add a Sales Agent';
+            if (submitResellerBtn) submitResellerBtn.textContent = 'Add Sales Agent';
         });
     }
     
@@ -335,8 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 isEditMode = false;
                 currentEditRow = null;
-                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a reseller';
-                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Reseller';
+                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a sales agent';
+                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Sales Agent';
             }
         });
     }
@@ -359,8 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 isEditMode = false;
                 currentEditRow = null;
-                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a reseller';
-                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Reseller';
+                if (resellerModalTitle) resellerModalTitle.textContent = 'Add a sales agent';
+                if (submitResellerBtn) submitResellerBtn.textContent = 'Add Sales Agent';
             }
         });
     }
@@ -509,10 +509,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     addResellerForm.reset();
                 }
                 if (resellerModalTitle) {
-                    resellerModalTitle.textContent = 'Add a Reseller';
+                    resellerModalTitle.textContent = 'Add a Sales Agent';
                 }
                 if (submitResellerBtn) {
-                    submitResellerBtn.textContent = 'Add Reseller';
+                    submitResellerBtn.textContent = 'Add Sales Agent';
                 }
             }
         }

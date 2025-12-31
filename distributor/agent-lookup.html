@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eSIM TOURS - Reseller</title>
+    <title>eSIM TOURS - Sales Agent</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
                         <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
                         <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
                     </svg>
-                    <span>Reseller Management</span>
+                    <span>Sales Agent Management</span>
                 </a>
                 
                 <div class="nav-item nav-item-parent">
@@ -124,7 +124,7 @@
                             <path d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10Z" fill="currentColor"/>
                             <path d="M10 11.25C7.92893 11.25 6.25 12.9289 6.25 15H13.75C13.75 12.9289 12.0711 11.25 10 11.25Z" fill="currentColor"/>
                         </svg>
-                        <h1>Reseller</h1>
+                        <h1>Sales Agent</h1>
                     </div>
                 </div>
                 
@@ -138,7 +138,7 @@
                         <input type="text" placeholder="Search" class="action-search-input">
                     </div>
                     <button class="add-reseller-btn">
-                        <span>+ Add a reseller</span>
+                        <span>+ Add a sales agent</span>
                     </button>
                 </div>
                 
@@ -314,7 +314,7 @@
     <div class="modal-overlay" id="detailsModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Reseller Details</h2>
+                <h2 class="modal-title">Sales Agent Details</h2>
                 <button class="modal-close" id="closeModal">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -334,7 +334,7 @@
                     </div>
                     <div class="info-list">
                         <div class="info-item">
-                            <span class="info-label">Reseller ID:</span>
+                            <span class="info-label">Sales Agent ID:</span>
                             <span class="info-value">#S10001</span>
                         </div>
                         <div class="info-item">
@@ -354,9 +354,14 @@
                                 <span class="info-label">Commission Rate:</span>
                                 <span class="info-value cashback-rate">3%</span>
                             </div>
-                            <p class="form-hint" style="font-size: 12px; color: #999; margin: 0; padding-left: 128px;">
-                                Reseller Commission = Share × Commission Rate (%)
-                            </p>
+                            <div class="form-hint-group" style="padding-left: 128px; margin-top: 4px;">
+                                <p class="form-hint" style="font-size: 12px; color: #666; margin: 0 0 6px 0; line-height: 1.5;">
+                                    Sales Agent Commission = Net Sales × Commission Rate (%)
+                                </p>
+                                <p class="form-hint" style="font-size: 12px; color: #666; margin: 0; line-height: 1.5;">
+                                    Your Share = Net Sales × [Share Ratio (%) - Commission Rate (%)]
+                                </p>
+                            </div>
                         </div>
                         <div class="info-item" style="flex-direction: column; align-items: flex-start; gap: 12px;">
                             <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
@@ -419,7 +424,7 @@
                     </div>
                     <div class="referral-fields">
                         <div class="referral-field">
-                            <label class="referral-label">Reseller's referral code</label>
+                            <label class="referral-label">Sales Agent's referral code</label>
                             <div class="referral-input-group">
                                 <input type="text" class="referral-input" value="GGU739HGB7B" readonly>
                                 <button class="copy-btn" data-copy="GGU739HGB7B">
@@ -431,7 +436,7 @@
                             </div>
                         </div>
                         <div class="referral-field">
-                            <label class="referral-label">Reseller's Invitation Link</label>
+                            <label class="referral-label">Sales Agent's Invitation Link</label>
                             <div class="referral-input-group">
                                 <input type="text" class="referral-input" value="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B" readonly>
                                 <button class="copy-btn" data-copy="https://test.esimtours.com/zh-Hans/register?referralCode=RFG36E8B">
@@ -448,7 +453,7 @@
                 <!-- QR Code -->
                 <div class="modal-section">
                     <div class="section-header">
-                        <h3 class="section-title">Reseller's Referral QR Code</h3>
+                        <h3 class="section-title">Sales Agent's Referral QR Code</h3>
                     </div>
                     <div class="qr-code-section">
                         <div class="qr-code-container">
@@ -495,7 +500,7 @@
     <div class="modal-overlay" id="addResellerModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="resellerModalTitle">Add a reseller</h2>
+                <h2 class="modal-title" id="resellerModalTitle">Add a sales agent</h2>
                 <button class="modal-close" id="closeAddResellerModal">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -546,9 +551,14 @@
                                 Commission Rate <span class="required">*</span>
                             </label>
                             <input type="number" class="form-input-field" id="resellerRebate" placeholder="Enter commission rate" step="0.1" min="0" max="100" required>
-                            <p class="form-hint" style="font-size: 12px; color: #999; margin-top: 6px; margin-bottom: 0;">
-                                Reseller Commission = Share × Commission Rate (%)
-                            </p>
+                            <div class="form-hint-group" style="margin-top: 8px;">
+                                <p class="form-hint" style="font-size: 12px; color: #666; margin: 0 0 6px 0; line-height: 1.5;">
+                                    Sales Agent Commission = Net Sales × Commission Rate (%)
+                                </p>
+                                <p class="form-hint" style="font-size: 12px; color: #666; margin: 0; line-height: 1.5;">
+                                    Your Share = Net Sales × [Share Ratio (%) - Commission Rate (%)]
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
@@ -585,7 +595,7 @@
                     </div>
                     
                     <div class="form-actions">
-                        <button type="submit" class="submit-reseller-btn" id="submitResellerBtn">Add Reseller</button>
+                        <button type="submit" class="submit-reseller-btn" id="submitResellerBtn">Add Sales Agent</button>
                     </div>
                 </form>
             </div>
